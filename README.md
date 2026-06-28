@@ -59,3 +59,7 @@ Detail lengkap & gampang diaudit: `app/Support/Rbac.php`. Dipakai juga lewat
 
 ---
 
+DOKUMENTASI
+<img width="1838" height="919" alt="image" src="https://github.com/user-attachments/assets/36465fd5-b5bd-4ff7-8eff-22a7742255f4" />
+
+
