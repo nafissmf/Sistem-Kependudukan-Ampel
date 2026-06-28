@@ -1,0 +1,46 @@
+# =================================================================
+# Docker Compose — Phase 1 (database lokal untuk development)
+# =================================================================
+# Setup Docker LENGKAP (app container PHP-FPM, Nginx reverse proxy, queue
+# worker, dst) akan ditambahkan pada Phase 9 (Deployment & CI/CD) sesuai
+# roadmap. Untuk sekarang, compose ini cukup untuk menjalankan MySQL +
+# phpMyAdmin lokal supaya kamu tidak perlu install MySQL manual.
+#
+# Pakai:
+#   docker compose up -d
+#   php artisan migrate
+#   php artisan db:seed
+
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: sik-ampel-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sik_ampel
+    ports:
+      - '3306:3306'
+    volumes:
+      - sik_ampel_mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost']
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  phpmyadmin:
+    image: phpmyadmin:5
+    container_name: sik-ampel-phpmyadmin
+    restart: unless-stopped
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: root
+      PMA_PASSWORD: root
+    ports:
+      - '8080:80'
+    depends_on:
+      - mysql
+
+volumes:
+  sik_ampel_mysql_data:
