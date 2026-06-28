@@ -26,3 +26,5 @@ Thumbs.db
 
 # IDE/tooling caches generated while building this project
 /.swc
+
+/storage/framework/views/*.php
