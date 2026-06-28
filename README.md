@@ -1,10 +1,5 @@
 # SIK Ampel — Sistem Informasi Kependudukan Kecamatan Ampel, Boyolali
 
-> **Status: Phase 1-9 LENGKAP ✅** (dengan beberapa simplifikasi yang didokumentasikan jujur
-> di bawah). Auth/RBAC → Master Data Wilayah → Penduduk/KK/Rumah → Verifikasi/QR/Signature →
-> Analytics/GIS → Import/Export/Backup → Notifikasi/Email/WhatsApp → Audit Log/Monitoring →
-> Security Hardening/Docker/CI-CD. Versi **Laravel 12 + MySQL**, satu codebase utuh.
-
 Platform e-Government untuk mengelola data Penduduk, Kartu Keluarga, dan Rumah di Kecamatan
 Ampel, Kabupaten Boyolali — dipakai oleh Super Admin, Operator Kecamatan, Operator Desa,
 Validator Desa, Camat, dan Kepala Desa.
