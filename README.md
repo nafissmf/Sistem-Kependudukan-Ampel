@@ -64,9 +64,3 @@ Detail lengkap & gampang diaudit: `app/Support/Rbac.php`. Dipakai juga lewat
 
 ---
 
-## 📜 Konteks
-
-Dibangun sebagai proyek portofolio pribadi, mengikuti spesifikasi e-Government "Sistem Informasi
-Kependudukan Kecamatan Ampel, Kabupaten Boyolali". Lihat [INSTALL.md](./INSTALL.md) untuk cara
-menjalankan di komputer lokal — **langkah `composer install` di sana adalah eksekusi PERTAMA
-project ini**, jadi luangkan waktu ekstra untuk debugging kalau ada yang tidak langsung jalan.
